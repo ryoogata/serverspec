@@ -9,7 +9,7 @@ include SpecInfra::Helper::DetectOS
 properties = YAML.load_file('properties.yml')
 
 RSpec.configure do |c|
-  c.color_enabled = true
+  c.color = true
   c.request_pty = true
   c.before :all do
     block = self.class.metadata[:example_group_block]
