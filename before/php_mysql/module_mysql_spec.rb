@@ -8,4 +8,3 @@ describe 'php::module_mysql' do
   end
 
 end
-
