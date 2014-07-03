@@ -17,13 +17,6 @@ describe 'mysql-server' do
     it { should_not be_listening }
   end
   
-  context file('/etc/my.cnf') do
-    it { should_not be_file }
-    it { should_not be_owned_by 'mysql' }
-    it { should_not be_grouped_into 'mysql' }
-    it { should_not be_mode 600 }
-  end
-  
   context file('/etc/mysql/conf.d') do
     it { should_not be_directory }
     it { should_not be_owned_by 'mysql' }
